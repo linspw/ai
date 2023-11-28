@@ -1,5 +1,11 @@
 # ai
 
+## 2.2.27
+
+### Patch Changes
+
+- a7dc746: experimental_useAssistant: Expose extra fetch options
+
 ## 2.2.26
 
 ### Patch Changes
