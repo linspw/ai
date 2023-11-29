@@ -1,6 +1,6 @@
 import swrv from 'swrv';
 import type { Ref } from 'vue';
-import { ref, unref } from 'vue';
+import { ref, toValue } from 'vue';
 import { callApi } from '../shared/call-api';
 import { processChatStream } from '../shared/process-chat-stream';
 import type {
@@ -147,7 +147,7 @@ export function useChat({
                   }),
                 ),
             body: {
-              ...unref(body), // Use unref to unwrap the ref value
+              ...toValue(body), // Use toValue to unwrap the values / refs / getters to normal value
               ...options?.body,
             },
             headers: {
